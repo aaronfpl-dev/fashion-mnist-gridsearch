@@ -1,0 +1,3 @@
+best_batch_size,best_neurons,best_optimizer,mean_cv_accuracy,test_accuracy,elapsed_seconds,cv_folds,candidates,total_fits
+32,128,adam,0.8841,0.8748,929.09,3,12,36
+

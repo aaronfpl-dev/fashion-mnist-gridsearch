@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fashion-mnist-gridsearch"
+version = "1.0.0"
+description = "GPU-assisted hyperparameter search for a Fashion-MNIST dense neural network"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {text = "MIT"}
+authors = [{name = "Aaron Fernandez Pinto"}]
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikeras>=0.13",
+  "scikit-learn>=1.4",
+  "seaborn>=0.13",
+  "tensorflow>=2.16",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
