@@ -45,3 +45,58 @@ Fashion-MNIST was created by Zalando Research as a drop-in image-classification 
 
 Aaron Fernandez Pinto — Data Science student at Universidad Autónoma de Baja California (UABC).
 
+---
+
+<details>
+<summary><b>Español</b></summary>
+
+<br>
+
+# Búsqueda en cuadrícula con Fashion-MNIST
+
+Una búsqueda de hiperparámetros asistida por GPU para un clasificador denso de TensorFlow sobre la división oficial de Fashion-MNIST. El proyecto evalúa **12 configuraciones × 3 folds = 36 ajustes**, mantiene intacto el conjunto de prueba de 10,000 imágenes durante la selección y documenta cómo el criterio humano acotó un espacio de búsqueda sugerido por un LLM.
+
+![Resumen del experimento](results/experiment_summary.png)
+
+## Resultado capturado en Colab T4
+
+| Métrica | Resultado |
+|---|---:|
+| Mejor tamaño de batch | 32 |
+| Mejor ancho de capa oculta | 128 neuronas |
+| Mejor optimizador | Adam |
+| Accuracy media de validación con 3 folds | **0.8841** |
+| Accuracy del conjunto de prueba apartado | **0.8748** |
+| Tiempo completo de búsqueda | 929.09 segundos |
+
+La clase más difícil fue `Shirt` (F1 0.67), mientras que `Trouser`, `Bag`, `Sandal` y ambas clases de calzado se clasificaron con una confiabilidad sustancialmente mayor.
+
+## Qué se incluye
+
+- Notebook ejecutado con los 36 registros de ajustes, reporte de clasificación, mapa de calor y matriz de confusión
+- Módulo reutilizable de experimento TensorFlow/SciKeras con semillas deterministas
+- Métricas capturadas de la ejecución y por clase en CSV
+- Una nota transparente que explica qué sugerencias del LLM se aceptaron o rechazaron
+- Pruebas que verifican el contrato de búsqueda y las conclusiones del notebook terminado
+
+## Ejecución
+
+La búsqueda completa está diseñada para Python 3.10–3.12 y se beneficia de un entorno TensorFlow compatible con CUDA:
+
+```bash
+python -m pip install -e ".[dev]"
+python -m fashion_gridsearch.experiment
+pytest
+```
+
+El cargador de Fashion-MNIST descarga automáticamente las 60,000 imágenes oficiales de entrenamiento y las 10,000 de prueba. La disponibilidad de GPU cambia el tiempo de ejecución, no la definición del experimento.
+
+## Fuente de datos
+
+Fashion-MNIST fue creado por Zalando Research como benchmark intercambiable de clasificación de imágenes: 70,000 imágenes en escala de grises de 28×28 distribuidas en 10 clases balanceadas, con la división oficial 60,000/10,000. El conjunto fuente tiene licencia MIT y no se duplica en este repositorio.
+
+## Autor
+
+Aaron Fernandez Pinto — estudiante de Ciencia de Datos en la Universidad Autónoma de Baja California (UABC).
+
+</details>
