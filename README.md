@@ -1,6 +1,6 @@
 # Fashion-MNIST Grid Search
 
-A GPU-assisted hyperparameter search for a dense TensorFlow classifier on the official Fashion-MNIST split. The project evaluates **12 configurations × 3 folds = 36 fits**, keeps the 10,000-image test set untouched during selection, and documents how human judgment narrowed an LLM-suggested search space.
+A GPU-assisted hyperparameter search for a dense TensorFlow classifier on the official Fashion-MNIST split. The project evaluates **12 configurations × 3 folds = 36 fits**, keeps the 10,000-image test set untouched during selection.
 
 ![Experiment summary](results/experiment_summary.png)
 
@@ -22,7 +22,6 @@ The most difficult class was `Shirt` (F1 0.67), while `Trouser`, `Bag`, `Sandal`
 - Executed notebook with all 36 fit logs, classification report, heatmap, and confusion matrix
 - Reusable TensorFlow/SciKeras experiment module with deterministic seeds
 - Captured run and class-level metrics in CSV
-- A transparent note explaining which LLM suggestions were accepted or rejected
 - Tests that verify the search contract and completed notebook conclusions
 
 ## Run
@@ -43,7 +42,7 @@ Fashion-MNIST was created by Zalando Research as a drop-in image-classification 
 
 ## Author
 
-Aaron Fernandez Pinto — Data Science student at Universidad Autónoma de Baja California (UABC).
+Aaron Fernandez Pinto, Data Science student at Universidad Autónoma de Baja California (UABC).
 
 ---
 
@@ -54,7 +53,7 @@ Aaron Fernandez Pinto — Data Science student at Universidad Autónoma de Baja 
 
 # Búsqueda en cuadrícula con Fashion-MNIST
 
-Una búsqueda de hiperparámetros asistida por GPU para un clasificador denso de TensorFlow sobre la división oficial de Fashion-MNIST. El proyecto evalúa **12 configuraciones × 3 folds = 36 ajustes**, mantiene intacto el conjunto de prueba de 10,000 imágenes durante la selección y documenta cómo el criterio humano acotó un espacio de búsqueda sugerido por un LLM.
+Una búsqueda de hiperparámetros asistida por GPU para un clasificador denso de TensorFlow sobre la división oficial de Fashion-MNIST. El proyecto evalúa **12 configuraciones × 3 folds = 36 ajustes**, mantiene intacto el conjunto de prueba de 10,000 imágenes durante la selección.
 
 ![Resumen del experimento](results/experiment_summary.png)
 
@@ -76,7 +75,6 @@ La clase más difícil fue `Shirt` (F1 0.67), mientras que `Trouser`, `Bag`, `Sa
 - Notebook ejecutado con los 36 registros de ajustes, reporte de clasificación, mapa de calor y matriz de confusión
 - Módulo reutilizable de experimento TensorFlow/SciKeras con semillas deterministas
 - Métricas capturadas de la ejecución y por clase en CSV
-- Una nota transparente que explica qué sugerencias del LLM se aceptaron o rechazaron
 - Pruebas que verifican el contrato de búsqueda y las conclusiones del notebook terminado
 
 ## Ejecución
@@ -97,6 +95,6 @@ Fashion-MNIST fue creado por Zalando Research como benchmark intercambiable de c
 
 ## Autor
 
-Aaron Fernandez Pinto — estudiante de Ciencia de Datos en la Universidad Autónoma de Baja California (UABC).
+Aaron Fernandez Pinto, estudiante de Ciencia de Datos en la Universidad Autónoma de Baja California (UABC).
 
 </details>
